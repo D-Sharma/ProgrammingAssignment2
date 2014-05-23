@@ -13,8 +13,8 @@ makeCacheMatrix <- function(x = matrix()) {
               m <<- NULL     #initialize cache symbol in the parent environment
             }
             get <- function() x        #Sub function that returns current values of martix object
-            setsolve <- function(solve) m <<- solve        #Cache matrix inverse in the parent environment
-            getsolve <- function() m
+            setsolve <- function(solve) m <<- solve        
+            getsolve <- function() m                        #Return matrix inverse from cache
             list(set = set, get = get,
                  setsolve = setsolve,
                  getsolve = getsolve)
